@@ -1,13 +1,12 @@
+defaults: &defaults
+  size_id: 66
+  region_id: 4
+  image_id: 5141286
+  ssh_key_id: 50039
 boxes:
   - name: anima
-    size_id: 66
-    region_id: 4
-    image_id: 5141286
     id: 2249609
-    ssh_key_id: 50039
+    <<: *defaults
   - name: ixion
-    size_id: 66
-    region_id: 4
-    image_id: 5141286
     id: 2249613
-    ssh_key_id: 50039
+    <<: *defaults

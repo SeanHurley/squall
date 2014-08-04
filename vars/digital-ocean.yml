@@ -1,0 +1,3 @@
+# DO credentials
+do_api_key: __API_KEY__
+do_client_id: __CLIENT_ID__

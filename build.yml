@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  connection: local
+  vars_files:
+    - vars/digital-ocean.yml
+    - vars/boxes.yml
+  tasks:
+    - include: tasks/build.yml user=root

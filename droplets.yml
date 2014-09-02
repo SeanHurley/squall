@@ -1,3 +1,4 @@
 - hosts: droplets
   roles:
     - common
+    - rvm

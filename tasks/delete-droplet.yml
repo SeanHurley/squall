@@ -1,8 +1,0 @@
-- name: Delete Droplet
-  digital_ocean: >
-    state=deleted
-    client_id={{ do_client_id }}
-    api_key={{ do_api_key }}
-    id={{ id }}
-    wait_timeout=600
-  register: delete_droplet

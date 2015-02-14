@@ -1,4 +1,0 @@
----
-- hosts: droplets
-  tasks:
-    - include: tasks/install.yml

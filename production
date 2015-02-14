@@ -1,5 +1,0 @@
-[local]
-localhost
-
-[droplets]
-104.131.25.165 ansible_ssh_user=root

@@ -1,6 +1,6 @@
-resource "digitalocean_droplet" "www-1" {
+resource "digitalocean_droplet" "www-2" {
     image = "ubuntu-14-04-x64"
-    name = "www-1"
+    name = "app02"
     region = "nyc3"
     size = "1gb"
     private_networking = true

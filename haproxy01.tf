@@ -1,6 +1,6 @@
-resource "digitalocean_droplet" "haproxy-www" {
+resource "digitalocean_droplet" "haproxy01" {
     image = "ubuntu-14-04-x64"
-    name = "haproxy-www"
+    name = "haproxy01"
     region = "nyc3"
     size = "1gb"
     private_networking = true
@@ -27,9 +27,9 @@ resource "digitalocean_droplet" "haproxy-www" {
       "sudo wget https://gist.githubusercontent.com/thisismitch/91815a582c27bd8aa44d/raw/8fc59b7cb88a2be9b802cd76288ca1c2ea957dd9/haproxy.cfg -O /etc/haproxy/haproxy.cfg",
 
       # replace ip address variables in haproxy conf to use droplet ip addresses
-      "sudo sed -i 's/HAPROXY_PUBLIC_IP/${digitalocean_droplet.haproxy-www.ipv4_address}/g' /etc/haproxy/haproxy.cfg",
-      "sudo sed -i 's/WWW_1_PRIVATE_IP/${digitalocean_droplet.www-1.ipv4_address_private}/g' /etc/haproxy/haproxy.cfg",
-      "sudo sed -i 's/WWW_2_PRIVATE_IP/${digitalocean_droplet.www-2.ipv4_address_private}/g' /etc/haproxy/haproxy.cfg",
+      "sudo sed -i 's/HAPROXY_PUBLIC_IP/${digitalocean_droplet.haproxy01.ipv4_address}/g' /etc/haproxy/haproxy.cfg",
+      "sudo sed -i 's/WWW_1_PRIVATE_IP/${digitalocean_droplet.app01.ipv4_address_private}/g' /etc/haproxy/haproxy.cfg",
+      "sudo sed -i 's/WWW_2_PRIVATE_IP/${digitalocean_droplet.app02.ipv4_address_private}/g' /etc/haproxy/haproxy.cfg",
 
       # restart haproxy to load changes
       "sudo service haproxy restart"

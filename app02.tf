@@ -1,4 +1,4 @@
-resource "digitalocean_droplet" "www-2" {
+resource "digitalocean_droplet" "app02" {
     image = "ubuntu-14-04-x64"
     name = "app02"
     region = "nyc3"
